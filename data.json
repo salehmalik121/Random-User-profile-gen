@@ -1,0 +1,56 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Eva",
+                "last": "Carr"
+            },
+            "location": {
+                
+                "city": "Olathe",
+                "state": "New York",
+                "country": "United States"
+                
+                
+            },
+            "email": "eva.carr@example.com",
+            "login": {
+                "uuid": "52a146aa-af6e-475d-bd63-558ae9d4fc8b",
+                "username": "bluefrog383",
+                "password": "goblin",
+                "salt": "9x7EtZ91",
+                "md5": "784c855ded32e241d7e1c45e371296ea",
+                "sha1": "88a76fd084b816e7e0a16984c245cc8117cd5ac5",
+                "sha256": "2b452f27e71e21d1e2e1ebe5dfcccf9ef0f7a206c8244e1b21365b0a26419514"
+            },
+            "dob": {
+                "date": "1973-03-08T23:26:41.895Z",
+                "age": 48
+            },
+            "registered": {
+                "date": "2014-01-18T10:56:36.263Z",
+                "age": 7
+            },
+            "phone": "(582)-975-7279",
+            "cell": "(159)-487-2386",
+            "id": {
+                "name": "SSN",
+                "value": "859-88-8166"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/85.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/85.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+            },
+            "nat": "US"
+        }
+    ],
+    "info": {
+        "seed": "2bfa7275ee042cdb",
+        "results": 1,
+        "page": 1,
+        "version": "1.3"
+    }
+}
