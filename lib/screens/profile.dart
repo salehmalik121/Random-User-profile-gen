@@ -43,7 +43,7 @@ class _ProfileState extends State<Profile> {
                 return CircularProgressIndicator();
               } else if (state is DataLoaded) {
                 seed = state.data.info.seed;
-                return profile(state.data);
+                return Profileclass(data: state.data);
               } else if (state is FailedDataLoaded) {
                 return Text('error');
               }
@@ -61,7 +61,8 @@ class _ProfileState extends State<Profile> {
       );
   void selected(Menuitem item) {
     if (item == Menuitems.showmore) {
-      Navigator.of(context).pushNamed('/About', arguments: seed);
+      BlocProvider.of<AboutBloc>(context).add(CallforAbout(seed: seed));
+      Navigator.of(context).pushNamed('/About');
     }
   }
 }

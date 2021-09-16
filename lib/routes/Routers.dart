@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:profile/bloc/AboutBLoc/bloc/about_bloc.dart';
 
 import 'package:profile/screens/AboutThisProfile.dart';
 import 'package:profile/screens/HomeScreen.dart';
@@ -14,7 +16,7 @@ class GeneratedRoutes {
         return MaterialPageRoute(builder: (context) => Profile());
       case '/About':
         return MaterialPageRoute(
-          builder: (context) => AboutThisProfile(seed: arguments.toString()),
+          builder: (context) => AboutThisProfile(),
         );
 
       default:

@@ -16,9 +16,9 @@ class LoadingAboutData extends AboutState {
 
 // ignore: must_be_immutable
 class AboutDataLoaded extends AboutState {
-  AboutData aboutData;
+  AboutData? aboutData;
   AboutDataLoaded({
-    required this.aboutData,
+    this.aboutData,
   });
   @override
   List<Object?> get props => [];

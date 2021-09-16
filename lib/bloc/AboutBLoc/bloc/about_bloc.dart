@@ -10,11 +10,7 @@ part 'about_event.dart';
 part 'about_state.dart';
 
 class AboutBloc extends Bloc<AboutEvent, AboutState> {
-  String seed;
-
-  AboutBloc(
-    this.seed,
-  ) : super(PreCallingState());
+  AboutBloc() : super(PreCallingState());
 
   @override
   Stream<AboutState> mapEventToState(
@@ -23,7 +19,7 @@ class AboutBloc extends Bloc<AboutEvent, AboutState> {
     if (event is CallforAbout) {
       yield LoadingAboutData();
       try {
-        final aboutdata = Aboutdata(seed: seed);
+        final aboutdata = Aboutdata(seed: event.seed.toString());
         final about = await aboutdata.getaboutdata();
         yield AboutDataLoaded(aboutData: about);
       } catch (e) {

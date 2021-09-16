@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
     return MultiBlocProvider(
       providers: [
         BlocProvider<UserBloc>(create: (_) => UserBloc()),
+        BlocProvider<AboutBloc>(create: (_) => AboutBloc())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

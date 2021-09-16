@@ -5,6 +5,11 @@ abstract class AboutEvent extends Equatable {
 }
 
 class CallforAbout extends AboutEvent {
+  String seed;
+  CallforAbout({
+    required this.seed,
+  });
+
   @override
   List<Object?> get props => [];
 }
