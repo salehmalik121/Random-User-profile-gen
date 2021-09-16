@@ -7,7 +7,7 @@ import 'package:profile/widgets/FFpreview.dart';
 
 import 'Header.dart';
 
-Widget profile(Results data) {
+Widget profile(Datamain data) {
   return BlocProvider(
     create: (_) => FollowBloc(),
     child: Scaffold(
@@ -24,7 +24,8 @@ Widget profile(Results data) {
                 FFpreview(DataToShow: 'Followers', subData: 17),
                 FFpreview(DataToShow: 'Following', subData: 69),
               ],
-            )
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('about')),
           ],
         ),
       ),
