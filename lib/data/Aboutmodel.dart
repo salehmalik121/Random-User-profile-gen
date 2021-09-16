@@ -11,14 +11,18 @@ class Picture {
 
 class Location {
   String city;
-
+  String state;
+  String country;
   Location({
     required this.city,
+    required this.state,
+    required this.country,
   });
   factory Location.fromjson(Map<String, dynamic> json) {
     final city = json["city"];
-
-    return Location(city: city);
+    final state = json["state"];
+    final country = json["country"];
+    return Location(city: city, state: state, country: country);
   }
 }
 
@@ -39,17 +43,28 @@ class Name {
   }
 }
 
-class Results {
+class AboutData {
   Picture picture;
   Location location;
   Name name;
-
-  Results({
+  String gender;
+  String phone;
+  String cell;
+  AboutData({
     required this.picture,
     required this.location,
     required this.name,
+    required this.gender,
+    required this.phone,
+    required this.cell,
   });
-  factory Results.fromjson(Map<String, dynamic> json) {
+  factory AboutData.fromjson(Map<String, dynamic> json) {
+    final gender = json['gender'];
+
+    final phone = json['phone'];
+
+    final cell = json['cell'];
+
     final picturejson = json['picture'];
     final picture = Picture.fromjson(picturejson);
 
@@ -59,38 +74,13 @@ class Results {
     final locationjson = json['location'];
     final location = Location.fromjson(locationjson);
 
-    return Results(
+    return AboutData(
+      gender: gender,
       name: name,
       location: location,
+      phone: phone,
+      cell: cell,
       picture: picture,
     );
-  }
-}
-
-class Info {
-  String seed;
-  Info({
-    required this.seed,
-  });
-  factory Info.fromjson(Map<String, dynamic> json) {
-    final seed = json['seed'];
-    return Info(seed: seed);
-  }
-}
-
-class Datamain {
-  Info info;
-  Results results;
-  Datamain({
-    required this.info,
-    required this.results,
-  });
-  factory Datamain.fromjson(Map<String, dynamic> json) {
-    final jsoninfo = json["info"];
-    final info = Info.fromjson(jsoninfo);
-
-    final jsonresults = json['results'][0];
-    final results = Results.fromjson(jsonresults);
-    return Datamain(results: results, info: info);
   }
 }

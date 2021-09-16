@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:profile/data/models.dart';
 import 'package:profile/widgets/FollowButton.dart';
 
+// ignore: must_be_immutable
 class HeaderTop extends StatelessWidget {
-  Results data;
+  Datamain data;
   HeaderTop({
     Key? key,
     required this.data,
@@ -17,7 +18,7 @@ class HeaderTop extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 40,
-          backgroundImage: NetworkImage(data.picture.large),
+          backgroundImage: NetworkImage(data.results.picture.large),
         ),
         const SizedBox(
           width: 10,
@@ -26,7 +27,7 @@ class HeaderTop extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${data.name.first} ${data.name.last}',
+              '${data.results.name.first} ${data.results.name.last}',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -45,7 +46,7 @@ class HeaderTop extends StatelessWidget {
                   color: textcolor,
                 ),
                 Text(
-                  data.location.city,
+                  data.results.location.city,
                   style: TextStyle(
                     fontSize: 12,
                     color: textcolor,

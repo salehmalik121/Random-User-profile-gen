@@ -5,19 +5,23 @@ class UserState extends Equatable {
 
   @override
   List<Object?> get props => throw UnimplementedError();
+
+  get data => null;
 }
 
 class PreDataLoading extends UserState {}
 
 class DataLoading extends UserState {}
 
+// ignore: must_be_immutable
 class DataLoaded extends UserState {
-  Results data;
+  Datamain data;
   DataLoaded({
     required this.data,
   });
 }
 
+// ignore: must_be_immutable
 class FailedDataLoaded extends UserState {
   String error;
   FailedDataLoaded({
